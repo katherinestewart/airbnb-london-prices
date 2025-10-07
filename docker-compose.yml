@@ -12,5 +12,20 @@ services:
       - airbnb_data:/var/lib/postgresql/data
       - ./:/work
 
+  app:
+      build: .
+      depends_on:
+        - db
+      environment:
+        DATABASE_URL: postgresql+psycopg2://airbnb:airbnb@db:5432/airbnb
+      working_dir: /app
+      volumes:
+        - ./:/app
+      ports:
+        - "8888:8888"
+      command: >
+        bash -lc "jupyter lab
+        --ip=0.0.0.0 --no-browser --allow-root"
+
 volumes:
   airbnb_data:
