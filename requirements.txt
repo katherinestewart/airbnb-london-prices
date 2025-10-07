@@ -1,0 +1,9 @@
+jupyterlab
+ipykernel
+pandas
+SQLAlchemy>=2.0,<3
+psycopg2-binary
+scikit-learn
+matplotlib
+numpy
+seaborn

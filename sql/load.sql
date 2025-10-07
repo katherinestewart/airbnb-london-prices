@@ -1,8 +1,8 @@
 \echo 'Loading listings...'
-\copy raw.listings FROM '/work/data/raw/listings.csv' CSV HEADER;
+\copy raw.listings FROM '/app/data/raw/listings.csv' CSV HEADER;
 
 \echo 'Loading reviews...'
-\copy raw.reviews  FROM '/work/data/raw/reviews.csv'  CSV HEADER;
+\copy raw.reviews  FROM '/app/data/raw/reviews.csv'  CSV HEADER;
 
 \echo 'Counts:'
 SELECT 'listings' AS table, COUNT(*) FROM raw.listings
