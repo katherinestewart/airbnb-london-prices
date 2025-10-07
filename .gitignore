@@ -9,3 +9,4 @@ airbnb.db
 
 data/raw/*
 notebooks/
+.ipynb_checkpoints/
